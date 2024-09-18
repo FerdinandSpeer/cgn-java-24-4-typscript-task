@@ -66,3 +66,20 @@ if (isAdmin !== null){
 if (isAdmin === false){
     console.log("isAdmin is false")
 }
+
+function printChristmasTree(n: number): void {
+    // Print the tree
+    for (let i = 1; i <= n; i++) {
+        let treeRow = ' '.repeat(n - i) + '*'.repeat(2 * i - 1);
+        console.log(treeRow);
+    }
+
+    // Print the trunk (5 lines)
+    for (let i = 1; i <= n; i++) {
+        let trunkRow = ' '.repeat(n - 1) + '*';
+        console.log(trunkRow);
+    }
+}
+
+const n = 5;
+printChristmasTree(n);
